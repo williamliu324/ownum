@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.NavigableSet;
-import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -170,16 +169,16 @@ public final class wordCounter {
         return wordcount;
     }
 
-    public static NavigableSet<Entry<String, Integer>> sortByKey(
-            Set<Entry<String, Integer>> unsortedPairs,
-            Comparator<Entry<String, Integer>> order) {
-
-        NavigableSet<Entry<String, Integer>> sortedPairs = new TreeSet<>(order);
-        for (Entry<String, Integer> p : unsortedPairs) {
-            sortedPairs.add(p);
-        }
-        return sortedPairs;
-    }
+//    public static NavigableSet<Entry<String, Integer>> sortByKey(
+//            Set<Entry<String, Integer>> unsortedPairs,
+//            Comparator<Entry<String, Integer>> order) {
+//
+//        NavigableSet<Entry<String, Integer>> sortedPairs = new TreeSet<>(order);
+//        for (Entry<String, Integer> p : unsortedPairs) {
+//            sortedPairs.add(p);
+//        }
+//        return sortedPairs;
+//    }
 
     public static NavigableSet<Entry<String, Integer>> sortByValue(
             Map<String, Integer> wordCountMap,
@@ -304,13 +303,13 @@ public final class wordCounter {
         /*
          * Alphabetical sort----------------------------------------------------
          */
-
-        System.out.println("\nSorted Alphabetically: ");
-        for (int i = 0; i < n; i++) {
-            System.out.println(" " + keyset.first().getKey());
-            keyset.remove(keyset.first());
-
-        }
+//
+//        System.out.println("\nSorted Alphabetically: ");
+//        for (int i = 0; i < n; i++) {
+//            System.out.println(" " + keyset.first().getKey());
+//            keyset.remove(keyset.first());
+//
+//        }
         try {
             inputFile.close();
         } catch (IOException e1) {
